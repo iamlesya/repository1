@@ -1,11 +1,9 @@
 {
+	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "untitled7.exe"
-		},
-		{
-			"path" : "untitled7.pdb"
+			"path" : "libs/data_structures/libdata_structures.a"
 		}
 	],
 	"backtrace" : 1,
@@ -13,11 +11,11 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_library"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"libs/data_structures/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -27,7 +25,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 1,
 				"parent" : 0
 			}
 		]
@@ -59,32 +57,13 @@
 			]
 		}
 	],
-	"id" : "untitled7::@6890427a1f51a3e7e1df",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
-			}
-		],
-		"language" : "C"
-	},
-	"name" : "untitled7",
-	"nameOnDisk" : "untitled7.exe",
+	"id" : "data_structures::@396ab3a44f37844d7cdb",
+	"name" : "data_structures",
+	"nameOnDisk" : "libdata_structures.a",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "libs/data_structures",
+		"source" : "libs/data_structures"
 	},
 	"sourceGroups" : 
 	[
@@ -101,9 +80,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.c",
+			"path" : "libs/data_structures/vector/vector.c",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "STATIC_LIBRARY"
 }
