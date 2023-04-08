@@ -42,3 +42,37 @@ void shrinkToFit(vector *v) {
 void deleteVector(vector *v) {
     reserve(v, 0);
 }
+
+// проверяет, является ли вектор v пустым
+bool isEmpty(vector *v) {
+    return (v->size == 0);
+}
+
+// проверяет, является ли вектор v полным
+bool isFull(vector *v) {
+    return (v->size == v->capacity && v->size != 0);
+}
+
+// возвращает i-ый элемент вектора v.
+int getVectorValue(vector *v, size_t i){
+    return (v->data[i]);
+}
+
+// добавляет элемент x в конец вектора.
+void pushBack(vector *v, int x) {
+    if (v->capacity == 0)
+        reserve(v,1);
+    if (isFull(v))
+        reserve(v,2 * v->capacity);
+    v->data[v->size] = x;
+    v->size += 1;
+}
+
+// удаляет последний элемент из вектора v.
+void popBack(vector *v) {
+    if (isEmpty(v)) {
+        fprintf(stderr, "Vector empty");
+        exit(1);
+    }
+    v->size -= 1;
+}
